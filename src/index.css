@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Custom CSS configuration for Tailwind v4.0 */
+@theme {
+  --color-primary-50: #f8f9fa;
+  --color-primary-100: #e9ecef;
+  --color-primary-500: #000000;
+  --color-primary-600: #333333;
+  --color-primary-900: #000000;
+  
+  --shadow-custom: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-custom-lg: 0 15px 35px rgba(0, 0, 0, 0.08);
+  --shadow-custom-xl: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-black text-white font-bold rounded-full transition-all duration-300 hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-black border-2 border-black font-semibold rounded-full transition-all duration-300 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-custom hover:shadow-custom-lg transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:-translate-y-2 hover:shadow-custom-xl;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply text-3xl lg:text-4xl font-bold text-center mb-4 relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-black rounded-full;
+  }
+  
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-br from-black/60 to-black/40;
+  }
+}
