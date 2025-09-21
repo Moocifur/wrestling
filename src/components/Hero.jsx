@@ -79,7 +79,7 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen bg-hero-pattern bg-cover bg-center bg-fixed">
       <div className="gradient-overlay"></div>
       
-      <div className="relative z-10 container-custom min-h-screen flex items-center py-20">
+      <div className="relative z-10 container-custom min-h-screen flex items-center py-20 pt-24 lg:pt-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Hero Text */}
           <motion.div 
